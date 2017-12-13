@@ -11,7 +11,7 @@ float x = 256;
 float y = 256;
 
 void setup() {
-  size(512,512);
+  size(1000,600);
   smooth();
   noStroke();
 
