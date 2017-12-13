@@ -1,9 +1,4 @@
-/**
- * shows the basic use of Ani aka a Hello Ani
- *    
- * MOUSE
- * click           : set end position of animation
- */
+Island island;
 
 import de.looksgood.ani.*;
 
@@ -17,6 +12,7 @@ void setup() {
 
   // you have to call always Ani.init() first!
   Ani.init(this);
+  island = new Island();
 }
 
 void draw() {
@@ -24,6 +20,8 @@ void draw() {
   fill(0);
   rectMode(CENTER);
   rect(x,y,60,60);
+  
+  island.display();
 }
 
 void mouseReleased() {
