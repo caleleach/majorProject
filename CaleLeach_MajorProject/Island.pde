@@ -6,7 +6,7 @@ class Island {
   Island() {
     x = width/2;
     y = height - 50;
-    islandType = 2;
+    islandType = 1;
     
   }
   

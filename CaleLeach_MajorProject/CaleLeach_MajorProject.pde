@@ -19,7 +19,7 @@ void draw() {
   background(255);
   fill(0);
   rectMode(CENTER);
-  rect(x,y,60,60);
+  rect(x,y,60,40);
   
   island.display();
 }
