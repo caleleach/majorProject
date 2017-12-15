@@ -1,24 +1,30 @@
 class Island {
   //data
   float x,y;
+  float dx;
   int islandType;
+  boolean islandOnScreen;
   
   Island() {
-    x = width/2;
+    x = width;
     y = height - 50;
     islandType = 1;
+    dx = 2;
+    islandOnScreen = false;
     
   }
   
   void display() {
-    fill(247,218,112);
-    rectMode(CORNER);
-    rect(x,y,100,100);
-    whatIsland();
+    moveIsland();
     
   }
   
   void whatIsland() {
+    fill(247,218,112);
+    rectMode(CORNER);
+    rect(x,y,100,100);
+    x -= dx;
+    
     if (islandType < 1) {
       fill(0,163,0);
       rect(x,y - 25, 100, 25);
@@ -37,6 +43,32 @@ class Island {
       fill(129,129,129);
       rect(x + 70,y - 20, 5, 20);
       rect(x + 30,y - 20, 5, 20);
+    }
+    //else if (islandType == 3) {
+    //  fill(129,129,129);
+    //  rect(x + 70,y - 80, 20, 80);
+    //  rect(x + 30,y - 80, 20, 80);
+    //}
+  }
+  
+  void moveIsland() {
+    if (islandOnScreen == false) {
+      whatIsland();
+      islandOnScreen = true;
+    }
+    else if (islandOnScreen == true && x < width && x > -100) {
+       whatIsland();
+    }
+    else {
+      x = width;
+      islandOnScreen = false;
+      
+      if (islandType < 2) {
+        islandType += 1;
+      }
+      else {
+        islandType = 0;
+      }
     }
   }
 }
