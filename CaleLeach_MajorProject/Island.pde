@@ -16,6 +16,9 @@ class Island {
   
   void display() {
     moveIsland();
+    rectMode(CORNER);
+    fill(93,218,255,200);
+    rect(0,height - 20,1000,20);
     
   }
   
@@ -27,7 +30,7 @@ class Island {
     
     if (islandType < 1) {
       fill(0,163,0);
-      rect(x,y - 25, 100, 25);
+      rect(x + 2,y - 25, 100, 25);
     }
     else if (islandType == 1) {
       fill(162,106,0);

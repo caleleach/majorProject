@@ -1,4 +1,5 @@
 Island island;
+Resources info;
 
 import de.looksgood.ani.*;
 
@@ -13,6 +14,7 @@ void setup() {
   // you have to call always Ani.init() first!
   Ani.init(this);
   island = new Island();
+  info = new Resources();
 }
 
 void draw() {
@@ -22,6 +24,7 @@ void draw() {
   rect(x,y,60,40);
   
   island.display();
+  info.infoDisplay();
 }
 
 void mouseReleased() {
