@@ -28,7 +28,9 @@ class Resources {
     if (food == 0) {
       crew -= 2;
     }
-    
+    if (water == 0) {
+      crew -= 4; 
+    }
   }
   
   

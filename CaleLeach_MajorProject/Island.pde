@@ -47,11 +47,6 @@ class Island {
       rect(x + 70,y - 20, 5, 20);
       rect(x + 30,y - 20, 5, 20);
     }
-    //else if (islandType == 3) {
-    //  fill(129,129,129);
-    //  rect(x + 70,y - 80, 20, 80);
-    //  rect(x + 30,y - 80, 20, 80);
-    //}
   }
   
   void moveIsland() {
