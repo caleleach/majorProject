@@ -69,4 +69,11 @@ class Island {
       }
     }
   }
+  
+  //void landed() {
+  //  if 
+    
+    
+    
+  //}
 }

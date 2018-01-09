@@ -1,10 +1,9 @@
 Island island;
 Resources info;
+Ship ship;
 
 import de.looksgood.ani.*;
-
-float x = 256;
-float y = 256;
+float x,y;
 
 void setup() {
   size(1000,600);
@@ -15,16 +14,17 @@ void setup() {
   Ani.init(this);
   island = new Island();
   info = new Resources();
+  ship = new Ship();
 }
 
 void draw() {
   background(255);
-  fill(0);
-  rectMode(CENTER);
-  rect(x,y,60,40);
+  x = ship.x;
+  y = ship.y;
   
   island.display();
   info.infoDisplay();
+  ship.display();
 }
 
 void mouseReleased() {
