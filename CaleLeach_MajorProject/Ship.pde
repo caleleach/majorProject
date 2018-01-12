@@ -23,10 +23,4 @@ class Ship {
     ShipXAni = new Ani(this, 1.5, "x", mouseX, Ani.SINE_OUT);
     ShipYAni = new Ani(this, 1.5, "y", mouseY, Ani.BACK_OUT);
   }
-  
-  
-  
-  
-  
-  
 }
