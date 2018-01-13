@@ -48,6 +48,7 @@ class Menu {
     else {
       fill(255);
     }
+    rectMode(CORNER);
     rect(buttonX,buttonY, buttonLength,buttonHeight);
     
   }

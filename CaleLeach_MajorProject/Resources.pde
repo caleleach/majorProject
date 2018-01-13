@@ -32,7 +32,4 @@ class Resources {
       crew -= 4; 
     }
   }
-  
-  
-  
 }

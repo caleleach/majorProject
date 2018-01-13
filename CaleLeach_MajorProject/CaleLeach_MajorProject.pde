@@ -13,6 +13,7 @@ void setup() {
   smooth();
   noStroke();
   
+  state = 0;
   landed = false;
 
   // you have to call always Ani.init() first!
@@ -22,33 +23,40 @@ void setup() {
   info = new Resources();
   ship = new Ship();
   mainMenu = new Menu();
-  
-  state = 0;
 }
 
 void draw() {
   if (state == 0) {
     background(0);
+    isShipLanded();
     mainMenu.displayStart();
   }
   
   else if (state == 1) {
     background(255);
+    
+    if (landed == true) {
+      state = 0; 
+    }
   
     island.display();
     info.infoDisplay();
     ship.display();
   }
   
-  if (state == 3) {
+  else if (state == 2) {
+    background(0);
+  }
+  
+  else if (state == 3) {
     background(255);
     mainMenu.displayEnd();
   }
 }
 
 void isShipLanded() {
-  if (ship.x + 60 > island.x && ship.y + 40 > island.y) {
-    landed = true;
+  if (ship.x + 30 > island.x && ship.x + 30 < island.x + 100 && ship.y + 20 > island.y && ship.y < island.y + 100) {
+    landed = true; 
   }   
 }
 
