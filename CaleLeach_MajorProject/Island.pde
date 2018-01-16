@@ -4,6 +4,7 @@ class Island {
   float dx;
   int islandType;
   boolean islandOnScreen;
+  boolean removeResources;
   
   Island() {
     x = width;
@@ -11,6 +12,7 @@ class Island {
     islandType = 1;
     dx = 2;
     islandOnScreen = false;
+    removeResources = false;
     
   }
   
@@ -53,6 +55,8 @@ class Island {
     if (islandOnScreen == false) {
       whatIsland();
       islandOnScreen = true;
+      removeResources = false;
+      
     }
     else if (islandOnScreen == true && x < width && x > -100) {
        whatIsland();
@@ -60,6 +64,7 @@ class Island {
     else {
       x = width;
       islandOnScreen = false;
+      removeResources = true;
       
       if (islandType < 2) {
         islandType += 1;

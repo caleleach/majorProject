@@ -20,7 +20,7 @@ class Ship {
  
   
   void handleMouseReleased() {
-    ShipXAni = new Ani(this, 1.5, "x", mouseX, Ani.SINE_OUT);
-    ShipYAni = new Ani(this, 1.5, "y", mouseY, Ani.BACK_OUT);
+    ShipXAni = new Ani(this, 2.0, "x", mouseX, Ani.SINE_OUT);
+    ShipYAni = new Ani(this, 2.0, "y", mouseY, Ani.BACK_OUT);
   }
 }
